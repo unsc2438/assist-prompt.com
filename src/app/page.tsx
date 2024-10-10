@@ -1,16 +1,13 @@
-"use client";
-
 import TranslationOutput from "@/modules/translation-output/_translation-output";
 import UserInteraction from "@/modules/user-interaction/_user-interaction";
 
-import { motion } from "framer-motion";
-
-const page = () => {
+const MainPage = () => {
   return (
-    <motion.main className="flex h-full w-full items-center justify-around">
+    <main className="relative flex h-full w-full items-center justify-around">
       <UserInteraction />
-    </motion.main>
+      <TranslationOutput />
+    </main>
   );
 };
 
-export default page;
+export default MainPage;

@@ -22,10 +22,11 @@ export const TranslationBtn = () => {
       className={cn(
         "df-el relative !min-w-[70px] !bg-white/20 !px-3 !py-[6px]",
         inputValue.length > 0 && inputValue.length < 10 && "!bg-red !text-white",
-        inputValue.length >= 10 && "!bg-green"
+        inputValue.length >= 10 && "!bg-green",
+        inputValue.length >= 10 && startTranslation && "!bg-yellow"
       )}
     >
-      {inputValue.length > 10 && startTranslation && startTranslation ? "취소" : "번역"}
+      {inputValue.length >= 10 && startTranslation ? "취소" : "번역"}
     </button>
   );
 };
