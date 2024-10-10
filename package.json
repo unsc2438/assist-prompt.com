@@ -1,0 +1,30 @@
+{
+  "name": "assist-prompt.com",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "rei": "rm -rf node_modules && rm -f bun.lockb && bun install"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "next": "^14.2.15"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "@types/node": "22.7.5",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "14.2.11",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "eslint-plugin-only-warn": "^1.1.0",
+    "eslint-plugin-unused-imports": "^4.1.4"
+  }
+}
