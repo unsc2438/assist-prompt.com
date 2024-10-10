@@ -9,3 +9,8 @@ export const startTranslationRecoilState = atom({
   key: "startTranslationRecoilKey",
   default: false
 });
+
+export const dropdownOpenedRecoilState = atom({
+  key: "dropdownOpenedRecoilKey",
+  default: false
+});

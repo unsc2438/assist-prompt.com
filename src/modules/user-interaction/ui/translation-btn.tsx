@@ -17,7 +17,7 @@ export const TranslationBtn = () => {
   return (
     <button
       onClick={() => {
-        setStartTranslation(!startTranslation);
+        inputValue.length >= 10 && setStartTranslation(!startTranslation);
       }}
       className={cn(
         "df-el relative !min-w-[70px] !bg-white/20 !px-3 !py-[6px]",

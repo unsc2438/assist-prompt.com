@@ -1,6 +1,7 @@
 "use client";
 
 import { selectedLangRecoilState } from "@/recoil/atoms/local-storage";
+import { dropdownOpenedRecoilState } from "@/recoil/atoms/no-storage";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,7 +10,7 @@ import {
 } from "@/shadcn/components/dropdown-menu";
 
 import { ChevronDownIcon } from "@radix-ui/react-icons";
-import { useRecoilState } from "recoil";
+import { useRecoilState, useSetRecoilState } from "recoil";
 
 const langList = [
   { id: 0, name: "영어", code: "en" },
@@ -18,9 +19,10 @@ const langList = [
 
 export const LangSelectionBtn = () => {
   const [selectedLang, setSelectedLang] = useRecoilState(selectedLangRecoilState);
+  const setDropdownOpened = useSetRecoilState(dropdownOpenedRecoilState);
 
   return (
-    <DropdownMenu>
+    <DropdownMenu onOpenChange={(bool) => setDropdownOpened(bool)}>
       <DropdownMenuTrigger asChild>
         <button className="df-el relative flex !min-w-[110px] items-center justify-center gap-2 !bg-white/20 !px-3 !py-[6px]">
           {selectedLang.name}로 <ChevronDownIcon />
