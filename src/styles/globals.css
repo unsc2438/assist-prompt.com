@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .df-el {
+    @apply rounded-md border-[0.5px] border-black/20 bg-transparent p-4 font-[400] shadow-lg outline-none transition-all duration-300 focus-within:border-[0.5px] focus-within:border-black/50 focus-within:shadow-xl hover:shadow-xl;
+  }
+}
+
 @layer base {
   body {
     background: linear-gradient(to right top, hsl(220, 69%, 79%), hsl(316, 89%, 87%));

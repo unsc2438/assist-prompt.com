@@ -1,5 +1,5 @@
-import TranslationOutput from "@/modules/main/translation-output/_translation-output";
-import UserInteraction from "@/modules/main/user-interaction/_user-interaction";
+import TranslationOutput from "@/modules/translation-output/_translation-output";
+import UserInteraction from "@/modules/user-interaction/_user-interaction";
 
 const page = () => {
   return (
